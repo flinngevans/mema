@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AffiliateHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/unnamed-7.png">
+    <style>
+        .about-container {
+            padding: 8rem 5% 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-section {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+
+        .hero-section p {
+            font-size: 1.25rem;
+            color: #6b7280;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .team-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .member-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .member-info {
+            padding: 1.5rem;
+        }
+
+        .member-info h3 {
+            font-size: 1.5rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .member-title {
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .member-bio {
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .stats-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+        }
+
+        .services-section {
+    padding: 4rem 0;
+    background: #f8f9fc;
+    border-radius: 30px;
+}
+
+.services-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.services-header h2 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.services-header p {
+    color: #6b7280;
+    font-size: 1.25rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+    padding: 0 5%;
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.service-card p {
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.value-proposition {
+    background: #f8f9fc;
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.value-proposition h3 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.value-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.value-point {
+    padding: 1.5rem;
+}
+
+.value-point strong {
+    display: block;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.value-point p {
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .services-header h2 {
+        font-size: 2rem;
+    }
+    
+    .value-proposition {
+        padding: 3rem 5%;
+    }
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html"><img src="images/unnamed-7.png" alt="M&E Media Logo" class="nav-logo"></a>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="book.html">Affiliate Program</a></li>
+            <li><a href="website-op.html">Website Optimisation</a></li>
+        </ul>
+    </nav>
+
+    <div class="about-container">
+        <div class="hero-section">
+            <h1>About Mason and Evans Media</h1>
+            <p>Revolutionizing affiliate marketing through innovative technology and unparalleled expertise. Acompanied by a team of experts in website optimisation and affiliate marketing.</p>
+        </div>
+
+        <div class="team-section">
+            <div class="team-member">
+                <div class="member-info">
+                    <h3>Henry Mason</h3>
+                    <div class="member-title">CEO & Co-Founder</div>
+                    <p class="member-bio">As a young entrepreneur with a passion for backend development, I've dedicated myself to revolutionizing the affiliate marketing landscape. My expertise in building robust, scalable systems has been the driving force behind our cutting-edge tracking platform. Having mastered complex database architectures and API integrations, I've engineered our affiliate program from the ground up to deliver unparalleled performance and reliability. My vision is to continue pushing the boundaries of what's possible in digital marketing through innovative backend solutions.</p>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="member-info">
+                    <h3>Flinn Gilroy-Evans</h3>
+                    <div class="member-title">CTO & Co-Founder</div>
+                    <p class="member-bio">Innovative young entrepreneur and frontend development prodigy, being raised in South-East England with high ambitions to become the most successful affiliate marketer in the world. With an exceptional eye for design and deep technical expertise in modern web technologies, I bring cutting-edge solutions to the affiliate marketing space. Successful web projects and passion for clean, efficient code has revolutionized how businesses approach their digital presence. Known for creating seamless user experiences and implementing sophisticated tracking systems.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <div class="stat-card">
+                <div class="stat-number">0%</div>
+                <div class="stat-label">Hidden Fees</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5/5</div>
+                <div class="stat-label">Star Rating</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">99.9%</div>
+                <div class="stat-label">Uptime</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Support</div>
+            </div>
+        </div>
+
+        <section class="services-section">
+            <div class="services-header">
+                <h2>Our Comprehensive Solutions to Affiliate Marketing</h2>
+                <p>Transforming businesses through innovative affiliate marketing technology</p>
+            </div>
+        
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="images/unnamed-1.png" alt="Analytics">
+                    </div>
+                    <h3>Advanced Affiliate Link System</h3>
+                    <p>Our proprietary link generation technology creates secure, trackable affiliate links enhanced with smart cookie tracking. This sophisticated system ensures accurate attribution and seamless commission management, allowing your partners to start generating revenue instantly.</p>
+                </div>
+        
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="images/unnamed-16.png" alt="Analytics">
+                    </div>
+                    <h3>Real-Time Analytics & Tracking</h3>
+                    <p>Monitor your affiliate program's performance with our comprehensive analytics dashboard. Track conversions, analyze customer behavior, and optimize your campaigns with detailed insights and real-time reporting.</p>
+                </div>
+        
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="images/unnamed-20.png" alt="Analytics">
+                    </div>
+                    <h3>Commission Management</h3>
+                    <p>Our flexible commission structure adapts to your business model. Set custom rates, manage multiple tiers, and automate payments—all while maintaining complete control over your affiliate program.</p>
+                </div>
+        
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="images/unnamed-15.png" alt="Analytics">
+                    </div>
+                    <h3>Growth Strategy Services</h3>
+                    <p>Beyond technology, we provide comprehensive growth solutions including website optimization, marketing strategy development, and performance enhancement services. Our team of experts works alongside you to maximize your online presence and revenue potential.</p>
+                </div>
+            </div>
+        
+            <div class="value-proposition">
+                <h3>Why Choose AffiliateHub?</h3>
+                <div class="value-points">
+                    <div class="value-point">
+                        <strong>Zero Upfront Cost</strong>
+                        <p>Our commission-based model means you only pay for successful conversions. No hidden fees, no monthly charges—just pure performance-based pricing.</p>
+                    </div>
+                    <div class="value-point">
+                        <strong>Seamless Integration</strong>
+                        <p>Our system integrates effortlessly with your existing infrastructure, requiring minimal technical setup while providing maximum impact.</p>
+                    </div>
+                    <div class="value-point">
+                        <strong>Full Service Support</strong>
+                        <p>From implementation to optimization, our dedicated team ensures your affiliate program succeeds at every step.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Mason and Evans Media</h4>
+                <p>Your partner in growth.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="book.html">Affiliate Program</a></li>
+                    <li><a href="website-op.html">Website Optimisation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: info@masonandevansmedia</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2022 Mason and Evans Media. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
